@@ -1,7 +1,4 @@
 -- Write your PostgreSQL query statement below
--- select * from products where (product_id,change_date) in (select product_id,max(change_date) from products
--- group by 1
--- having change_date<='2019-08-16');
 with temp1 as (
 select * from products 
 where (product_id,change_date) in
